@@ -31,6 +31,23 @@ set index to 0
 set trackLength to 15
 ```
 
+
+## void Horse::init(int index, int trackLength)
+```
+set position to 0
+set Horse::index to index
+set Horse::trackLength to trackLength
+```
+
+## void Horse::advance()
+```
+assume random generator is seeded 
+Roll a random 0 - 1 store in int coin
+add coin to position, put result back in positon
+```
+
+
+
 ## void Horse::printLane()
 
 ```
