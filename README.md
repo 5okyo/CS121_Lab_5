@@ -1,7 +1,7 @@
 ```mermaid
 classDiagram
 
-class Horse{
+class Horse {
     int position
     int index
     int trackLength
@@ -12,24 +12,27 @@ class Horse{
     bool isWinner()
 }
 
-class Race{
+class Race {
     int NUM_HORSES
     int TRACK_LENGTH
-    Horse horses[NUM_HORSES]
+    Horse[] horses
     Race()
     start()
 }
 
 Race --> Horse
+```
 
 ## Horse::Horse()
+
 ```
 set position to 0
-set index to 0 
+set index to 0
 set trackLength to 15
 ```
 
 ## void Horse::printLane()
+
 ```
 make for loop, pos goes from 0 to trackLength
     if pos == Horse::position:
@@ -40,35 +43,41 @@ After loop, print a newline
 ```
 
 ## bool Horse::isWinner()
+
 ```
 bool result = false
+
 if position >= trackLength:
     result = true
     print some commentary
-return """"""result"""""
+
+return result
 ```
 
 ## Race::Race()
+
 ```
-    const static int NUM_HORSES = 5
-    const int TRACK_LENGTH = 15
+const static int NUM_HORSES = 5
+const int TRACK_LENGTH = 15
 
-    seed random generator    
+seed random generator
 
-    intialize the horses array
-    for each horse:
-        intialize with index and trackLength
+initialize the horses array
+
+for each horse:
+    initialize with index and trackLength
 ```
 
 ## void Race::start()
+
 ```
-    bool keepGoing = true
-    while keepGoing:
+bool keepGoing = true
+
+while keepGoing:
     for each horse:
         advance that horse
         print its lane
+
         if it is the winner:
             set keepGoing to false
-```            
-
-
+```
