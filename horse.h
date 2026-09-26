@@ -3,7 +3,7 @@
 
 class Horse{
 	private:
-	 int postion;
+	 int position;
 	 int index;
 	 int trackLength;
 
