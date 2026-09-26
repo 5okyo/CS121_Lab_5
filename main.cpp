@@ -2,29 +2,20 @@
 #include <cstdlib>
 #include <ctime> 
 #include "horse.h"
+#include "race.h"
 
 
-void testHorse();
 
 int main(){
-	srand(time(NULL)); 
 	std::cout << "Race Game" << std::endl;
+	Race race;
+	race.start(); 
 
 	return 0;
 } // end of main
 
 
 
-void testHorse(){
-	Horse h;
-	bool keepGoing = true;
-	while (keepGoing){
-		h.advance();
-		h.printline();
-		if (h.isWinner()){
-			keepGoing = false;
-		}
 
-	}
-}
+
 

@@ -11,24 +11,24 @@ Horse::Horse(){
 
 
 void Horse::advance(){
- int coint = rand() % 2;
- postion += coin;
+ int coin = rand() % 2;
+ position += coin;
 } // end of advance 
 
 void Horse::printLane(){
 	for(int pos = 0 ; pos < trackLength; pos++){
-		if (pos == Horse::positon){
-			std::cout << Horse::index
+		if (pos == position){
+			std::cout << Horse::index;
 		} else {
 		  std::cout << ".";
 		 }
 	}
+	std::cout << std::endl;
 }
-std::cout << std::endl;
 
 bool Horse::isWinner(){
 	bool result = false;
-	if (postion >= trackLength){
+	if (position >= trackLength){
 		result = true;
 		std::cout << "Horse " << index << "wins!" << std::endl;
 
