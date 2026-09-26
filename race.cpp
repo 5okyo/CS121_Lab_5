@@ -9,8 +9,8 @@ Race::Race(){
 	const static int NUM_HORSES = 5;
 	const int TRACK_LENGTH = 15;
 	srand(time(0));
-	   for (int i = 0; i < NUM_HORSES; ++i) {
-        	horses[i] = Horse(i, TRACK_LENGTH);
+	   for (int i = 0; i < NUM_HORSES; i++) {
+        	horses[i].init(i, TRACK_LENGTH);  
 	   }
 
 
@@ -19,12 +19,13 @@ Race::Race(){
 void Race::start(){
        	bool keepGoing = true;
 	while(keepGoing){
-		for(Horse){
-			h.advance();
-			h.printLane();
-			if(h.isWinner()){
+		for(int i = 0; i < NUM_HORSES; i++){
+			horses[i].advance();
+			horses[i].printLane();
+			if(horses[i].isWinner()){
 				keepGoing = false;
 			}
+
 		}
 	}
 }

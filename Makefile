@@ -1,5 +1,5 @@
-HorseRace: main.o horse.o
-	g++ -g main.o horse.o -o horseRace
+HorseRace: main.o horse.o race.o
+	g++ -g main.o horse.o race.o -o  horseRace
 
 main.o: main.cpp horse.h
 	g++ -g -c main.cpp
@@ -7,6 +7,8 @@ main.o: main.cpp horse.h
 horse.o: horse.cpp horse.h
 	g++ -g -c horse.cpp
 
+race.o: race.cpp race.h horse.h
+	g++ -g -c race.cpp
 
 run: horseRace
 	./horseRace
@@ -17,4 +19,4 @@ clean:
 	rm *.o
 
 debug: horseRace
-	gbd horseRace
+	gdb horseRace

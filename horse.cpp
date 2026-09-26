@@ -9,6 +9,11 @@ Horse::Horse(){
 } // end of constructor
  
 
+void Horse::init(int index, int trackLength){
+	Horse::position = 0;
+	Horse::index = index;
+	Horse::trackLength = trackLength;
+}
 
 void Horse::advance(){
  int coin = rand() % 2;
@@ -30,7 +35,7 @@ bool Horse::isWinner(){
 	bool result = false;
 	if (position >= trackLength){
 		result = true;
-		std::cout << "Horse " << index << "wins!" << std::endl;
+		std::cout << "Horse " << index << " wins!" << std::endl;
 
 	} 
 	return result;
